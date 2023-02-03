@@ -1,7 +1,5 @@
 # Book E-commerce Project
 
----
-
 ## Built with
 
 - React
