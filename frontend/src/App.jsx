@@ -1,12 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.css'
+import { useSelector } from 'react-redux'
+import Home from './pages/Home'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
+
+   const products = useSelector(state => state.products)
+   console.log(products)
   return (
-    <>
-      <h1 className='text-3xl font-bold text-blue-500'>It's working</h1>
-    </>
+   
+  <div>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+    </Routes>
+  </div>
+      
+
+  
   )
 }
 
