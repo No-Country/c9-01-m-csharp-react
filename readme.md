@@ -5,7 +5,7 @@
 - React
 - C#
 - .NET
-- MySQL
+- Sql Server
 
 ## Getting started
 
