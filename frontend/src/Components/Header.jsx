@@ -3,18 +3,15 @@ import { FaBars } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import {  BsSearch } from "react-icons/bs";
+import {VscChromeClose} from "react-icons/vsc";
+import { AiOutlineRight } from "react-icons/ai";
+import "./Header.css";
 
 const Header = () => {
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-
-  let positionamiento ={
-    position:"absolute",
-    top:"0",
-    bottom:"0",
-    left:"-100%",
-    right:"0"
-  }
+  let isOpen = 'p-5 w-screen h-screen bg-zinc-200 absolute inset-0';
+  let isClose = 'p-5 w-screen h-screen bg-zinc-200 absolute posicionamiento';
     
   return (
     <div className='relative'>
@@ -38,16 +35,32 @@ const Header = () => {
         </div>
 
       </div>
-      {
-        isOpenMenu ?
-        (<div className='w-screen h-screen bg-zinc-200 absolute inset-0'  id='menu-desplegable'>
+      
+      <div className={isOpenMenu ? isOpen : isClose}  id='menu-desplegable'>
         
-        </div>) : 
+        <div className='w-full'>
+          <VscChromeClose onClick={()=>{setIsOpenMenu(!isOpenMenu)}} className='cursor-pointer'/>
+        </div>
+        <div className='relative w-full pt-6'>
+          <a href='#'>No Ficción</a>
+          <AiOutlineRight className='absolute top-7 right-4' />
+        </div>
+
+        <div className='relative w-full pt-6'>
+          <a href='#'>Ficción</a>
+          <AiOutlineRight className='absolute top-7 right-4' />
+        </div>
         
-        (<div className='w-screen h-screen bg-zinc-200 absolute inset-0'  id='menu-desplegable' style={positionamiento}>
-        
-        </div>)
-      }
+        <div className='w-full pt-6'>
+          <a href='#'>Best seller</a>
+        </div>
+
+        <div className='w-full pt-6'>
+          <a href='#'>Descuentos</a>
+        </div>
+
+      </div>
+      
     </div>
     
   )
