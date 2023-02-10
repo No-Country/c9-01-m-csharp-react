@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EcommerceBooks.API.Data;
+﻿namespace EcommerceBooks.API.Data;
 
 public partial class Book
 {
@@ -18,4 +15,6 @@ public partial class Book
     public DateTime EditionDate { get; set; }
 
     public decimal Price { get; set; }
+
+    public virtual ICollection<BookGender> BookGenders { get; set; }
 }
