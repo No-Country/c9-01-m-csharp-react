@@ -8,4 +8,5 @@ public partial class Gender
     public int GenderId { get; set; }
 
     public string Name { get; set; } = null!;
+    public virtual ICollection<BookGender> BookGenders { get; set; }
 }
