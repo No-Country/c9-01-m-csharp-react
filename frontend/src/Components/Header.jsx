@@ -10,8 +10,8 @@ import "./Header.css";
 const Header = () => {
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  let isOpen = 'p-5 w-screen h-screen bg-zinc-200 absolute inset-0';
-  let isClose = 'p-5 w-screen h-screen bg-zinc-200 absolute posicionamiento';
+  let isOpen = 'p-5 w-screen h-screen bg-zinc-200 absolute inset-0 transition-all';
+  let isClose = 'p-5 w-screen h-screen bg-zinc-200 absolute posicionamiento transition-all';
     
   return (
     <div className='relative'>
@@ -41,22 +41,22 @@ const Header = () => {
         <div className='w-full'>
           <VscChromeClose onClick={()=>{setIsOpenMenu(!isOpenMenu)}} className='cursor-pointer'/>
         </div>
-        <div className='relative w-full pt-6'>
-          <a href='#'>No Ficción</a>
-          <AiOutlineRight className='absolute top-7 right-4' />
+        <div className='w-full pt-6'>
+          <a href='#'>Biblioteca</a>
+          
         </div>
 
-        <div className='relative w-full pt-6'>
-          <a href='#'>Ficción</a>
-          <AiOutlineRight className='absolute top-7 right-4' />
+        <div className='w-full pt-6'>
+          <a href='#'>Best-sellers</a>
+          
         </div>
         
         <div className='w-full pt-6'>
-          <a href='#'>Best seller</a>
+          <a href='#'>Descuentos</a>
         </div>
 
         <div className='w-full pt-6'>
-          <a href='#'>Descuentos</a>
+          <a href='#'>Perfil</a>
         </div>
 
       </div>
