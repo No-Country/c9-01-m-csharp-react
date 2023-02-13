@@ -12,6 +12,7 @@ const arrayImafes = [
 const Home = () => {
   return (
     <div className='mx-auto'>
+      
         <Slider imagenes={arrayImafes}/>
     </div>
 
