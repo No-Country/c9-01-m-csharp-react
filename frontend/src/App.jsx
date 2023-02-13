@@ -5,12 +5,14 @@ import Categories from "./Components/Categories.jsx";
 
 function App() {
   return (
-    <>
-      <Header/>
-      {sections.map((section, id) => {return <BookCarouselSection name={section} key={id} />})}
-      <Categories />
-      <Footer />
-    </>
+    
+    <div>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+    </div>
+      
+  
   )
 }
 

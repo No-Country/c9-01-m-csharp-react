@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/No-Country/c9-01-m-csharp-react/issues"
   },
-  "homepage": "https://github.com/No-Country/c9-01-m-csharp-react#readme"
+  "homepage": "https://github.com/No-Country/c9-01-m-csharp-react#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
+    "axios": "^1.3.2",
+    "framer-motion": "^9.0.2",
+    "react-icons": "^4.7.1",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.1"
+  }
 }
