@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header/>
-      {sections.map(section => {return <BookCarouselSection name={section} />})}
+      {sections.map((section, id) => {return <BookCarouselSection name={section} key={id} />})}
       <Footer />
     </>
   )
