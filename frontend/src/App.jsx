@@ -1,12 +1,14 @@
 import Header from './Components/Header'
 import Footer from "./Components/Footer.jsx";
 import BookCarouselSection from "./Components/BookCarouselSection.jsx";
+import Categories from "./Components/Categories.jsx";
 
 function App() {
   return (
     <>
       <Header/>
       {sections.map((section, id) => {return <BookCarouselSection name={section} key={id} />})}
+      <Categories />
       <Footer />
     </>
   )
