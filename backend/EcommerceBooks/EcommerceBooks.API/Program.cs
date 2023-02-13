@@ -1,5 +1,6 @@
 using EcommerceBooks.API.Data;
 using EcommerceBooks.API.Repository;
+using EcommerceBooks.API.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +19,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapGet("/books", (EcommerceBooksContext context) => context.Books.ToList());
+//Registrar todas las rutas
+app.AddBooksRoutes();
 
 app.UseHttpsRedirection();
 

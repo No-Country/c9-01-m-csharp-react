@@ -3767,6 +3767,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "BooksDTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/BooksDTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BooksDTOs.dll": {}
+        }
       }
     }
   },
@@ -11055,10 +11065,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "BooksDTOs/1.0.0": {
+      "type": "project",
+      "path": "../BooksDTOs/BooksDTOs.csproj",
+      "msbuildProject": "../BooksDTOs/BooksDTOs.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "BooksDTOs >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
@@ -11099,7 +11115,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Proyectos\\NoCountry\\c9-01-m-csharp-react\\backend\\EcommerceBooks\\BooksDTOs\\BooksDTOs.csproj": {
+              "projectPath": "C:\\Proyectos\\NoCountry\\c9-01-m-csharp-react\\backend\\EcommerceBooks\\BooksDTOs\\BooksDTOs.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
