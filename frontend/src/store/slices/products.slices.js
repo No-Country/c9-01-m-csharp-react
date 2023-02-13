@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const productSlice = createSlice({
   name: "products",
-  initialState: "aca  va  la variable",
+  initialState: "variable global",
   reducers: {
     setProductGlobal: (state, action) => action.payload,
   },

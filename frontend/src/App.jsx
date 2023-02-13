@@ -1,9 +1,15 @@
-import Header from './Components/Header'
-import Footer from "./Components/Footer.jsx";
-import BookCarouselSection from "./Components/BookCarouselSection.jsx";
-import Categories from "./Components/Categories.jsx";
+import { useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+
 
 function App() {
+
+  // comprovación de los estados globales 
+  const products = useSelector(state => state.products)
+  console.log(products)
+
+
   return (
     
     <div>

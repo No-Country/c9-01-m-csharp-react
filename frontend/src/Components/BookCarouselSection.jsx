@@ -1,7 +1,7 @@
 import BookCarouselHeading from "./BookCarouselHeading.jsx";
 import BookCarousel from "./BookCarousel.jsx";
 
-const bookCarouselSection = (props) => {
+const BookCarouselSection = (props) => {
     return (
         <div className='py-8 px-5'>
             <BookCarouselHeading name={props.name} />
@@ -10,4 +10,4 @@ const bookCarouselSection = (props) => {
     )
 }
 
-export default bookCarouselSection;
+export default BookCarouselSection;
