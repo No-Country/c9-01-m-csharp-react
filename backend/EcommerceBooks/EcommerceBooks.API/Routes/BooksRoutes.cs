@@ -1,6 +1,4 @@
-﻿using EcommerceBooks.API.Extensions;
-
-namespace EcommerceBooks.API.Routes;
+﻿namespace EcommerceBooks.API.Routes;
 
 public static class BooksRoutes
 {

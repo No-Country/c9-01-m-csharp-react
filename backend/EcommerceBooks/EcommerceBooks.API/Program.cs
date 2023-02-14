@@ -8,8 +8,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSqlServer<EcommerceBooksContext>(builder.Configuration.GetConnectionString("BooksDB"));
 builder.Services.AddScoped<BooksRepository>();
-builder.Services.AddScoped<BookGender>();
-builder.Services.AddScoped<Gender>();
+builder.Services.AddScoped<BookGenderRepository>();
+builder.Services.AddScoped<GenderRepository>();
 
 var app = builder.Build();
 
@@ -21,6 +21,8 @@ if (app.Environment.IsDevelopment())
 
 //Registrar todas las rutas
 app.AddBooksRoutes();
+app.AddBookGendersRoutes();
+app.AddGendersRoutes();
 
 app.UseHttpsRedirection();
 
