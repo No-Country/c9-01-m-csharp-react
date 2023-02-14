@@ -274,3 +274,5 @@ C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBook
 C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\obj\Debug\net7.0\EcommerceBooks.API.pdb
 C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\obj\Debug\net7.0\EcommerceBooks.API.genruntimeconfig.cache
 C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\obj\Debug\net7.0\ref\EcommerceBooks.API.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\BooksDTOs.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\BooksDTOs.pdb
