@@ -1,4 +1,6 @@
-﻿namespace EcommerceBooks.API.Routes;
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace EcommerceBooks.API.Routes;
 
 public static class GendersRoutes
 {
@@ -12,15 +14,18 @@ public static class GendersRoutes
 
         return app;
 
+        [Authorize]
         async Task<IResult> GetGenders(GenderRepository repository)
             => Results.Ok((await repository.GetAllAsync()).ToGendersDTO());
 
+        [Authorize]
         async Task<IResult> GetGenderById(GenderRepository repository, int id)
         {
             Gender? gender = await repository.GetAsync(id);
             return gender is null ? Results.NotFound() : Results.Ok(gender.ToGenderDTO());
         }
 
+        [Authorize]
         async Task<IResult> PostGender(GenderRepository repository, NewGenderDTO newGender)
         {
             var gender = await repository.PostAsync(newGender.ToGender());
@@ -28,6 +33,7 @@ public static class GendersRoutes
             return Results.Ok(gender.ToGenderDTO());
         }
 
+        [Authorize]
         async Task<IResult> PutGender(GenderRepository repository, int id, NewGenderDTO newGenderDTO)
         {
             var existingGender = await repository.GetAsync(id);
@@ -46,6 +52,7 @@ public static class GendersRoutes
             }
         }
 
+        [Authorize("IsAdmin")]
         async Task<IResult> DeleteGender(GenderRepository repository, int id)
         {
             var existingGender = await repository.GetAsync(id);

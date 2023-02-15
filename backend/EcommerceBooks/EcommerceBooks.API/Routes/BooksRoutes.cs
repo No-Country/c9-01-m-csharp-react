@@ -1,4 +1,6 @@
-﻿namespace EcommerceBooks.API.Routes;
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace EcommerceBooks.API.Routes;
 
 public static class BooksRoutes
 {
@@ -12,15 +14,18 @@ public static class BooksRoutes
 
         return app;
 
+        [Authorize]
         async Task<IResult> GetBooks(BooksRepository repository)
             => Results.Ok((await repository.GetAllAsync()).ToBooksDTO());
 
+        [Authorize]
         async Task<IResult> GetBookById(BooksRepository repository, int id)
         {
             Book? book = await repository.GetAsync(id);
             return book is null ? Results.NotFound() : Results.Ok(book.ToBookDTO());
         }
 
+        [Authorize]
         async Task<IResult> PostBook(BooksRepository repository, NewBookDTO newBook)
         {
             var book = await repository.PostAsync(newBook.ToBook());
@@ -28,6 +33,7 @@ public static class BooksRoutes
             return Results.Ok(book.ToBookDTO());
         }
 
+        [Authorize]
         async Task<IResult> PutBook(BooksRepository repository, int id, NewBookDTO newBookDTO)
         {
             var existingBook = await repository.GetAsync(id);
@@ -52,6 +58,7 @@ public static class BooksRoutes
             }
         }
 
+        [Authorize("IsAdmin")]
         async Task<IResult> DeleteBook(BooksRepository repository, int id)
         {
             var existingBook = await repository.GetAsync(id);

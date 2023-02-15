@@ -1,4 +1,6 @@
-﻿namespace EcommerceBooks.API.Routes
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace EcommerceBooks.API.Routes
 {
     public static class BookGenderRoutes
     {
@@ -11,6 +13,7 @@
             app.MapDelete("/bookGender/{id}", DeleteBookGender).WithTags("BookGenders");
             return app;
 
+            [Authorize]
             async Task<IResult> GetBookGenderByGenderId(BookGenderRepository repository, int id)
             {
                 IEnumerable<BookGender> bookGenders = (await repository.GetAllAsync()).Where(bg => bg.GenderId == id);
@@ -23,6 +26,7 @@
                     return Results.NotFound();
             }
 
+            [Authorize]
             async Task<IResult> GetBookGenderByIdBookId(BookGenderRepository repository, int id)
             {
                 IEnumerable<BookGender> bookGenders = (await repository.GetAllAsync()).Where(bg => bg.BookId == id);
@@ -35,6 +39,7 @@
                     return Results.NotFound();
             }
 
+            [Authorize]
             async Task<IResult> PostBookGender(BookGenderRepository repository, NewBookGenderDTO newBookGenderDTO)
             {
                 var bookGender = await repository.PostAsync(newBookGenderDTO.ToBookGender());
@@ -49,7 +54,7 @@
                 
             }
 
-
+            [Authorize("IsAdmin")]
             async Task<IResult> DeleteBookGender(BookGenderRepository repository, int id)
             {
                 var existingBookGender = await repository.GetAsync(id);
