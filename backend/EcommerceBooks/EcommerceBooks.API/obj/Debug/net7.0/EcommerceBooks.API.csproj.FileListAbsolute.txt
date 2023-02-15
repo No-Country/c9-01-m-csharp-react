@@ -276,3 +276,10 @@ C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBook
 C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\obj\Debug\net7.0\ref\EcommerceBooks.API.dll
 C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\BooksDTOs.dll
 C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\BooksDTOs.pdb
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\EcommerceBooks.API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
