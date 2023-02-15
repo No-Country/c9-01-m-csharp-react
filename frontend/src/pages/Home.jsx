@@ -8,9 +8,8 @@ const Home = () => {
     const sections = ['Descuentos', 'Recomendaciones', 'Ultimos lanzamientos'];
   return (
     <div>
-    <Header/>
+      <Header/>
       {sections.map((section, id) => {return <BookCarouselSection name={section} key={id} />})}
-      <Categories />
       <Footer />
       
     </div>
