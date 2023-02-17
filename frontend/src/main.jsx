@@ -13,6 +13,7 @@ import Home from './pages/Home'
 import ErrorPage from './Components/ErrorPage'
 import Library from './pages/Library'
 import Category from './Components/Category'
+import Profile from "./pages/Profile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
     element: <Category/>,
     errorElement:<ErrorPage/>,
   },
+  {
+    path: 'perfil',
+    element: <Profile />,
+    errorElement: <ErrorPage />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
