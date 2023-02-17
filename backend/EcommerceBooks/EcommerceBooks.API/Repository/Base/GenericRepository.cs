@@ -17,7 +17,7 @@ public abstract class GenericRepository<T, TContext> : IGenericRepository<T>
     public async Task<IEnumerable<T>> GetAllAsync()
         => await _set.ToListAsync();
 
-    public async Task<T> GetAsync(int id)
+    public async Task<T?> GetAsync(int id)
         => await _set.FindAsync(id);
 
     public async Task<T> PostAsync(T value)
