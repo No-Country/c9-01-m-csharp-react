@@ -19,7 +19,7 @@ const Header = () => {
 
         <div id='buttons-header ' className='flex justify-between items-center'>
           
-            <FaBars className='text-base cursor-pointer' onClick={()=>{setIsOpenMenu(!isOpenMenu)}}/>
+          <FaBars className='text-base cursor-pointer' onClick={()=>{setIsOpenMenu(!isOpenMenu)}}/>
           
           <h1 className='text-base text-center w-full'>Libros</h1>
 
