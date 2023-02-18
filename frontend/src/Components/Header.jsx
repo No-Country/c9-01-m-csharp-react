@@ -10,8 +10,8 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  let isOpen = 'p-5 w-screen h-screen bg-zinc-200 absolute inset-0 transition-all';
-  let isClose = 'p-5 w-screen h-screen bg-zinc-200 absolute posicionamiento transition-all';
+  let isOpen = 'z-40 p-5 w-screen h-screen bg-zinc-200 absolute inset-0 transition-all';
+  let isClose = 'z-40 p-5 w-screen h-screen bg-zinc-200 absolute posicionamiento transition-all';
   let activeStyle = {
     textDecoration: "underline",
   };
@@ -60,17 +60,17 @@ const Header = () => {
         </div>
 
         <div className='w-full pt-6'>
-          <NavLink to={"/best-sellers"}             
+          <NavLink to={"/library/Best-sellers"}             
           style={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>Best-sellers</NavLink>
         </div>
-        
+       
         <div className='w-full pt-6'>
-          <NavLink to={"/descuentos"}             
+          <NavLink to={"/library/Descuentos"}             
           style={({ isActive }) =>
               isActive ? activeStyle : undefined
-            }>Biblioteca</NavLink>
+            }>Descuentos</NavLink>
         </div>
 
         <div className='w-full pt-6'>

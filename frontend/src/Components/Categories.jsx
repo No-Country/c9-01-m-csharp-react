@@ -20,6 +20,6 @@ const Categories = () => {
     )
 }
 
-const categories = ['Arte', 'Autoayuda', 'Ciencia ficción', 'Diseño', 'Historia', 'Tecnología', 'Literatura', 'Novela', 'Psicología']
+const categories = ['Arte y Diseño', 'Autoayuda', 'Ciencia ficción', 'Diseño', 'Historia', 'Tecnología', 'Literatura', 'Novela', 'Psicología']
 
 export default Categories;
