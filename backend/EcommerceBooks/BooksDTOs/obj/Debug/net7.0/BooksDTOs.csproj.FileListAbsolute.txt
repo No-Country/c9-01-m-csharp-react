@@ -1,0 +1,12 @@
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\bin\Debug\net7.0\BooksDTOs.deps.json
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\bin\Debug\net7.0\BooksDTOs.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\bin\Debug\net7.0\BooksDTOs.pdb
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\BooksDTOs.csproj.AssemblyReference.cache
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\BooksDTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\BooksDTOs.AssemblyInfoInputs.cache
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\BooksDTOs.AssemblyInfo.cs
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\BooksDTOs.csproj.CoreCompileInputs.cache
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\BooksDTOs.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\refint\BooksDTOs.dll
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\BooksDTOs.pdb
+C:\Proyectos\NoCountry\c9-01-m-csharp-react\backend\EcommerceBooks\BooksDTOs\obj\Debug\net7.0\ref\BooksDTOs.dll

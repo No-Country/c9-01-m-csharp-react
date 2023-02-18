@@ -14,7 +14,6 @@ const Home = () => {
     <div>
       <Header/>
       {sections.map((section, id) => {return <BookCarouselSection name={section} key={id} />})}
-      <Categories />
       <Footer />
       
     </div>

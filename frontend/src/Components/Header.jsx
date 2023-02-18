@@ -4,14 +4,17 @@ import { FaUserAlt } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import {  BsSearch } from "react-icons/bs";
 import {VscChromeClose} from "react-icons/vsc";
-import { AiOutlineRight } from "react-icons/ai";
 import "./Header.css";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   let isOpen = 'p-5 w-screen h-screen bg-zinc-200 absolute inset-0 transition-all';
   let isClose = 'p-5 w-screen h-screen bg-zinc-200 absolute posicionamiento transition-all';
+  let activeStyle = {
+    textDecoration: "underline",
+  };
     
   return (
     <div className='relative'>
@@ -42,21 +45,39 @@ const Header = () => {
           <VscChromeClose onClick={()=>{setIsOpenMenu(!isOpenMenu)}} className='cursor-pointer'/>
         </div>
         <div className='w-full pt-6'>
-          <a href='#'>Biblioteca</a>
           
+          <NavLink to={"/"}             
+          style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+          }>Home</NavLink>
         </div>
 
         <div className='w-full pt-6'>
-          <a href='#'>Best-sellers</a>
-          
+          <NavLink to={"/library"}             
+          style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+          }>Biblioteca</NavLink>
+        </div>
+
+        <div className='w-full pt-6'>
+          <NavLink to={"/best-sellers"}             
+          style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>Best-sellers</NavLink>
         </div>
         
         <div className='w-full pt-6'>
-          <a href='#'>Descuentos</a>
+          <NavLink to={"/descuentos"}             
+          style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>Biblioteca</NavLink>
         </div>
 
         <div className='w-full pt-6'>
-          <a href='#'>Perfil</a>
+          <NavLink to={"/perfil"}
+          style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+          }>Perfil</NavLink>
         </div>
 
       </div>

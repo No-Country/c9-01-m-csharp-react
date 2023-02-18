@@ -10,4 +10,6 @@ public partial class BookGender
     public int BookId { get; set; }
 
     public int GenderId { get; set; }
+    public virtual Book Book { get; set; } = null!;
+    public virtual Gender Gender { get; set; } = null!;
 }
