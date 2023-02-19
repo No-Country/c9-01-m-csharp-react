@@ -6,11 +6,11 @@ import Footer from './Footer';
 const Category = () => {
     const categoria = useParams();
     let {categoryName} = categoria;
-    console.log(categoryName)
+
   return (
     <div>
         <Header/>
-          <h2 className="text-xl px-5 my-5" style={{fontSize:"2.5rem"}}>{categoryName}</h2>
+          <h2 className="text-3xl font-medium px-5 my-5">{categoryName}</h2>
           <p>Aqui deberia ir la paginacion</p>
         <Footer/>
     </div>
