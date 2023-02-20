@@ -27,11 +27,11 @@ const submit = data =>{
           <form onSubmit={handleSubmit(submit)}>
             <div>
                 <label htmlFor='email'>email</label>
-                <imput type='text' id='email'{...register("email")}/>
+                <input type='text' id='email'{...register("email")}/>
             </div>
             <div>
                 <label htmlFor='password'>email</label>
-                <imput type='password' id='password'{...register("password")}/>
+                <input type='password' id='password'{...register("password")}/>
             </div>
             <button>Login</button>
           </form>     
