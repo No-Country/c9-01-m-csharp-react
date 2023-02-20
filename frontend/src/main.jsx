@@ -18,6 +18,7 @@ import PersonalData from "./Components/PersonalData.jsx";
 import PersonalObjectives from "./Components/PersonalObjectives.jsx";
 import PersonalRead from "./Components/PersonalRead.jsx";
 import PersonalFavourites from "./Components/PersonalFavourites.jsx";
+import Login from './pages/Login'
 
 const router = createBrowserRouter([
   {
@@ -60,7 +61,13 @@ const router = createBrowserRouter([
     path: '/perfil/favoritos',
     element: <PersonalFavourites />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: '/login',
+    element: <Login />,
+    errorElement: <ErrorPage />
   }
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
