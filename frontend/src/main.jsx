@@ -14,6 +14,10 @@ import ErrorPage from './Components/ErrorPage'
 import Library from './pages/Library'
 import Category from './Components/Category'
 import Profile from "./pages/Profile.jsx";
+import PersonalData from "./Components/PersonalData.jsx";
+import PersonalObjectives from "./Components/PersonalObjectives.jsx";
+import PersonalRead from "./Components/PersonalRead.jsx";
+import PersonalFavourites from "./Components/PersonalFavourites.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +39,26 @@ const router = createBrowserRouter([
   {
     path: 'perfil',
     element: <Profile />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/perfil/datos',
+    element: <PersonalData />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/perfil/objetivos',
+    element: <PersonalObjectives />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/perfil/leidos',
+    element: <PersonalRead />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/perfil/favoritos',
+    element: <PersonalFavourites />,
     errorElement: <ErrorPage />
   }
 ]);

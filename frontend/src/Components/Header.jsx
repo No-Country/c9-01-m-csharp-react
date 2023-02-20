@@ -5,7 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import {  BsSearch } from "react-icons/bs";
 import {VscChromeClose} from "react-icons/vsc";
 import "./Header.css";
-import { NavLink } from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 const Header = () => {
 
@@ -22,12 +22,16 @@ const Header = () => {
 
         <div id='buttons-header ' className='flex justify-between items-center'>
           
-          <FaBars className='text-base cursor-pointer' onClick={()=>{setIsOpenMenu(!isOpenMenu)}}/>
-          
-          <h1 className='text-base text-center w-full'>Libros</h1>
+            <FaBars className='text-base cursor-pointer' onClick={()=>{setIsOpenMenu(!isOpenMenu)}}/>
+
+          <Link to={'/'}>
+            <h1 className='text-base text-center w-full'>Libros</h1>
+          </Link>
 
           <div className='flex '>
-            <FaUserAlt className='mx-2 text-base'/>
+            <Link to={'/perfil'}>
+              <FaUserAlt className='mx-2 text-base'/>
+            </Link>
             <FaShoppingCart className='mx-2 text-base'/>
           </div>
         </div>
