@@ -18,7 +18,7 @@ const submit = data =>{
             password: ""
         })
 
-}
+    }
 
 
 
