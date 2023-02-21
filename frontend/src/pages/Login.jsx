@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {useForm} from 'react-hook-form'
 
 const Login = () => {
-// data el  donde viene el password y correo con lo que hace login 
+// data el  donde viene el password y correo con lo que hace login
 
 const {handleSubmit, register, reset} = useForm()
 
