@@ -1,9 +1,9 @@
 import React from 'react'
 import Book from './Book';
-
-
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 const Pagination = () => {
-
+  let { categoryName } = useParams();
     const listaDeLibros = [
       
       {
@@ -64,7 +64,10 @@ const Pagination = () => {
 
           return(
             <div className='mx-auto my-3' key={index}>
-              <Book title={libro.name} author={libro.author} price={libro.price} />
+              <Link to={`/library/${categoryName}/${libro.name}`}>
+                <Book title={libro.name} author={libro.author} price={libro.price} />
+              </Link>
+              
             </div>
             
           )
