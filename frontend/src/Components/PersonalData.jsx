@@ -1,7 +1,11 @@
+import Header from "./Header.jsx";
+import GoBack from "./GoBack.jsx";
+
 const PersonalData = () => {
     return (
         <>
-            <p>Data</p>
+            <Header />
+            <GoBack />
         </>
     )
 }
