@@ -21,6 +21,7 @@ import PersonalFavourites from "./Components/PersonalFavourites.jsx";
 import Login from './pages/Login'
 import Register from './pages/Register'
 import SendBooks from './pages/SendBooks'
+import BookDescription from './Components/BookDescription'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,12 @@ const router = createBrowserRouter([
   {
     path: "/library/:categoryName",
     element: <Category/>,
+    errorElement:<ErrorPage/>,
+  },
+
+  {
+    path: "/library/:categoryName/:bookDescription",
+    element: <BookDescription/>,
     errorElement:<ErrorPage/>,
   },
   {
