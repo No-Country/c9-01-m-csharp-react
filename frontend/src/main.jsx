@@ -19,6 +19,8 @@ import PersonalObjectives from "./Components/PersonalObjectives.jsx";
 import PersonalRead from "./Components/PersonalRead.jsx";
 import PersonalFavourites from "./Components/PersonalFavourites.jsx";
 import Login from './pages/Login'
+import Register from './pages/Register'
+import SendBooks from './pages/SendBooks'
 
 const router = createBrowserRouter([
   {
@@ -65,6 +67,16 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+    errorElement: <ErrorPage />
+  }, 
+  {
+    path: '/register',
+    element: <Register />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/sendbooks',
+    element: <SendBooks />,
     errorElement: <ErrorPage />
   }
 
