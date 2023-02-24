@@ -2,7 +2,7 @@ EndPoints
 
 Uri : http://nocountry.somee.com
 
-Auth
+Authorize
 
 Post
 
@@ -13,6 +13,7 @@ Post
 }
 
 Post
+
 /aut/register
 {
   "userName": "string",
@@ -23,6 +24,7 @@ Post
 }
 
 Post
+
 /aut/registerAdmin
 {
   "userName": "string",
@@ -36,12 +38,15 @@ Post
 BookGenders
 
 Get
+
 /bookGender/gender/{id}
 
 Get
+
 /bookGender/book/{id}
 
 Post
+
 /bookGender
 {
   "bookId": 0,
@@ -49,15 +54,18 @@ Post
 }
 
 Delete
+
 /bookGender/{id}
 
 
 Books
 
 Get
+
 /books
 
 Post
+
 /books
 {
   "name": "string",
@@ -70,9 +78,11 @@ Post
 }
 
 Get
+
 /books/{id}
 
 Put
+
 /books/{id}
 {
   "name": "string",
@@ -85,6 +95,7 @@ Put
 }
 
 Delete
+
 /books/{id}
 
 
@@ -92,22 +103,27 @@ Delete
 Genders
 
 Get
+
 /genders
 
 Post
+
 /genders
 {
   "name": "string"
 }
 
 Get
+
 /genders/{id}
 
 Put
+
 /genders/{id}
 {
   "name": "string"
 }
 
 Delete
+
 /genders/{id}
