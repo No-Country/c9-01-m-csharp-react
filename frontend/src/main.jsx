@@ -5,10 +5,7 @@ import './index.css'
 import { Provider } from 'react-redux'
 import store from './store'
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import Home from './pages/Home'
 import ErrorPage from './Components/ErrorPage'
 import Library from './pages/Library'
