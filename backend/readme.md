@@ -5,6 +5,7 @@ Uri : http://nocountry.somee.com
 Auth
 
 Post
+
 /aut/login
 {
   "userName": "string",
