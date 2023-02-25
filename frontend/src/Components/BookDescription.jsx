@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useParams, Link } from 'react-router-dom';
 import Header from './Header';
-import { AiOutlineRight} from "react-icons/ai";
+import { AiOutlineRight, AiOutlineDown, AiOutlineLine} from "react-icons/ai";
 import { SlStar } from "react-icons/sl";
 import { FcLike } from "react-icons/fc";
 import Footer from "./Footer";
@@ -11,21 +11,26 @@ import { Collapse } from 'react-collapse';
 const AccordionItem=({open, toggle, title, description})=>{
 
   return(
-
-    <div className='pt-[10px]'>
-        <div onClick={toggle} className='bg-white py-[25px] px-[50px] flex justify-between items-center cursor-pointer'>
-          <p className='text-[22px] font-semibold '>
-            {title}
+    <div className='pt-[15px]'>
+        <div onClick={toggle} className='w-full bg-white  flex justify-between items-center cursor-pointer'>
+          <p className='text-[18px]'>
+            Descripción del producto
           </p>
           <div className='text-[30px]'>
             
-            {open ? "Abierto" : "pegado"}
+            {open ? <AiOutlineLine/> : <AiOutlineDown/>}
           </div>
         </div>
 
         <Collapse isOpened={open}>
-          <div className='bg-white px-[50px] pb-[20px]'>
-            {description}
+          <div className='bg-white px-3 pt-2'>
+            <h2 className='text-[18px]'>Sinopsis</h2>
+            <p className='text-[10px]'>{description}</p>
+          </div>
+
+          <div className='bg-white px-3 pt-2'>
+            <h2 className='text-[18px]'>Reseñas</h2>
+            <p className='text-[10px]'>{description}</p>
           </div>
         </Collapse>
     </div>
@@ -34,41 +39,21 @@ const AccordionItem=({open, toggle, title, description})=>{
 
 const BookDescription = () => {
 
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  let { bookDescription, categoryName } = useParams();
 
   const toggle =(index)=>{
     if(open===index){
-
       return setOpen(null)
     }
-
     setOpen(index)
-
   }
-
-  let { bookDescription, categoryName } = useParams();
-
+  
   let accordionData =[
-
     {
       title:"this is a demo title",
       description:"lorem ipsum"
     },
-    {
-      title:"this is a demo title",
-      description:"lorem ipsum"
-    },
-
-    {
-      title:"this is a demo title",
-      description:"lorem ipsum"
-    },
-
-    {
-      title:"this is a demo title",
-      description:"lorem ipsum"
-    },
-    
   ]
 
   return (
@@ -107,11 +92,9 @@ const BookDescription = () => {
             <button className='bg-stone-200 col-span-2 py-2 flex items-center justify-center'><FcLike/></button>
           </div>
           
-          <section className='grid place-items-center'>
-
+          <section className='grid'>
             {
               accordionData.map((data,index)=>{
-
                 return <AccordionItem 
                         key={index} 
                         open={index === open} 
@@ -121,7 +104,6 @@ const BookDescription = () => {
                         />
               })
             }
-
           </section>
           
         </div>
