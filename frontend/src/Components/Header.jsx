@@ -7,18 +7,20 @@ import {VscChromeClose} from "react-icons/vsc";
 import "./Header.css";
 import {Link, NavLink} from 'react-router-dom';
 
+import "../index.css";
+
 const Header = () => {
 
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  let isOpen = 'z-40 p-5 w-screen h-screen bg-zinc-200 absolute inset-0 transition-all';
-  let isClose = 'z-40 p-5 w-screen h-screen bg-zinc-200 absolute posicionamiento transition-all';
+  let isOpen = 'z-40 p-5 w-screen h-screen  absolute inset-0 transition-all bg-color-color-principal';
+  let isClose = 'z-40 p-5 w-screen h-screen  absolute posicionamiento transition-all bg-color-color-principal';
   let activeStyle = {
     textDecoration: "underline",
   };
     
   return (
     <div className='relative'>
-      <div id='Header' className='w-screen p-5' style={{height:"120px"}}>
+      <div id='Header' className='bg-color-color-principal w-screen p-5' style={{height:"120px"}}>
 
         <div id='buttons-header ' className='flex justify-between items-center'>
           

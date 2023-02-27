@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root{
+
+    --color-primary: #7bbfcc;
+    --color-secundario: #e9ecef;
+    --acento: #fdb849;
+}
+
+.bg-color-color-principal{
+
+    background-color: var(--color-primary);
+}
+
+.color-acento{
+
+    color: var(--acento);
+}
+
+.bg-color-acento{
+
+    background-color: var(--acento);
+}

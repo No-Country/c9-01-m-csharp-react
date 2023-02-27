@@ -5,10 +5,7 @@ import './index.css'
 import { Provider } from 'react-redux'
 import store from './store'
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import Home from './pages/Home'
 import ErrorPage from './Components/ErrorPage'
 import Library from './pages/Library'
@@ -19,7 +16,10 @@ import PersonalObjectives from "./Components/PersonalObjectives.jsx";
 import PersonalRead from "./Components/PersonalRead.jsx";
 import PersonalFavourites from "./Components/PersonalFavourites.jsx";
 import Login from './pages/Login'
+import Register from './pages/Register'
+import SendBooks from './Components/SendBooks'
 import BookDescription from './Components/BookDescription'
+import Admin from './pages/Admin'
 
 const router = createBrowserRouter([
   {
@@ -72,6 +72,21 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+    errorElement: <ErrorPage />
+  }, 
+  {
+    path: '/register',
+    element: <Register />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/sendbooks',
+    element: <SendBooks />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/admin',
+    element: <Admin />,
     errorElement: <ErrorPage />
   }
 
