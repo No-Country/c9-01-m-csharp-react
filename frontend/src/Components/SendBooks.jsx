@@ -22,22 +22,25 @@ const SendBooks = () => {
             })
    }
   return (
-    <div className='bg-slate-400 h-auto flex-col justify-center items-center py-4'>
-        
+     
       
-        <div className='max-h-max bg-white  flex flex-col justify-center items-center rounded-3xl w-80 mx-auto '>
+    <div className='bg-white h-full w-full '>
         
-        <form className='w-72 mx-4  pt-4' onSubmit={handleSubmit(submit)}>
+        <form className='w-full mx-4  pt-4 grid grid-cols-3 gap-8 p-4' onSubmit={handleSubmit(submit)}>
             <div className='flex flex-col mb-4'>
-                <label className='text-sm' htmlFor='name'>Nombre del libro</label>
-                <input className='border-2 px-2 text-sm h-9 rounded' type='text' id='name' {...register("name")} placeholder="Introduzca el nombre del libro"/>
+                <label className='text-sm' htmlFor='name mb-4'>Titulo de libro</label>
+                <input className='border-2 px-2 text-sm h-9 rounded' type='text' id='name' {...register("name")} placeholder="Introduzca el titulo del libro"/>
             </div>
             <div className='flex flex-col mb-4'>
                 <label className='text-sm' htmlFor="author">Autor</label>
-                <input className='border-2 px-2 text-sm h-9 rounded' type="text" id="author"{...register("author")} placeholder="nombre del libro"/>
+                <input className='border-2 px-2 text-sm h-9 rounded' type="text" id="author"{...register("author")} placeholder="nombre del autor"/>
             </div>
             <div className='flex flex-col mb-4'>
-                <label className='text-sm' htmlFor="category">Categoria</label>
+                <label className='text-sm' htmlFor="category">fecha de publicación</label>
+                <input className='border-2 px-2 text-sm h-9 rounded' type="date" id="category"{...register("category")} placeholder="nombre del libro"/>
+           	</div>
+               <div className='flex flex-col mb-4'>
+                <label className='text-sm' htmlFor="category">lugar de publicación</label>
                 <input className='border-2 px-2 text-sm h-9 rounded' type="text" id="category"{...register("category")} placeholder="nombre del libro"/>
            	</div>
             <div className='flex flex-col mb-4'> 
@@ -49,10 +52,10 @@ const SendBooks = () => {
                 <label className='text-sm' htmlFor="description">Descripcion del producto</label>
                 <input className='border-2 px-2 text-sm h-9 rounded' type="text" id="description"{...register("description")} placeholder='nombre del libro'/>
             </div>
-            <button className='bg-gray-600 text-white w-full py-2 rounded-3xl mb-4'>Enviar</button>
+            <button className='bg-[#FDB849] text-white w-full py-2 rounded-3xl mb-4'>Enviar</button>
         </form> 
-        </div>
     </div>
+  
   )
 }
 

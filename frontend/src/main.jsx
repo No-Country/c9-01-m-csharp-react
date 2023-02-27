@@ -17,9 +17,8 @@ import PersonalRead from "./Components/PersonalRead.jsx";
 import PersonalFavourites from "./Components/PersonalFavourites.jsx";
 import Login from './pages/Login'
 import Register from './pages/Register'
-import SendBooks from './pages/SendBooks'
+import SendBooks from './Components/SendBooks'
 import BookDescription from './Components/BookDescription'
-import Admin from './Components/Admin'
 
 const router = createBrowserRouter([
   {
@@ -81,7 +80,7 @@ const router = createBrowserRouter([
     path: '/sendbooks',
     element: <SendBooks />,
     errorElement: <ErrorPage />
-  },
+  }
 
 ]);
 
