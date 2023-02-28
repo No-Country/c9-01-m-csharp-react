@@ -19,6 +19,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import SendBooks from './Components/SendBooks';
 import BookDescription from './Components/BookDescription';
+import Admin from './pages/Admin';
 
 
 
@@ -79,8 +80,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: '/sendbooks',
-    element: <SendBooks />,
+    path: '/admin',
+    element: <Admin />,
     errorElement: <ErrorPage />
   }
 
