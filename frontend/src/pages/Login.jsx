@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import {useForm} from 'react-hook-form'
 import {Link, NavLink} from 'react-router-dom';
+import Header from '../Components/Header';
 
 const Login = () => {
 // data el  donde viene el password y correo con lo que hace login
@@ -25,7 +26,9 @@ const submit = data =>{
 
     return (
 
+        <div>
 
+        <Header/>
         <div className='bg-[#7BBFCC] h-screen relative'>
             <div className='max-h-72 overflow-hidden ... flex justify-center items-center' >
                 <img src="https://images.pexels.com/photos/2067569/pexels-photo-2067569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
@@ -50,6 +53,7 @@ const submit = data =>{
                 <h3 className='mb-4'>¿Olvidaste tu contraseña?</h3>
             </div>
          
+        </div>
         </div>
 
     )

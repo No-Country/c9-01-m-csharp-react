@@ -9,8 +9,8 @@ const AdminProducts = () => {
             <h2>Productos</h2>
             <button>Agregar un producto</button>
         </div>
-        <div className='border-2 rounded-2xl p-4'>
-            <h3>Titulo y descripción </h3>
+        <div className=''>
+            
             <div>
                 <SendBooks/>
 
