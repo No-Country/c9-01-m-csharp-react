@@ -1,25 +1,26 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 // importacion de redux
-import { Provider } from 'react-redux'
-import store from './store'
+import { Provider } from 'react-redux';
+import store from './store';
 
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
-import Home from './pages/Home'
-import ErrorPage from './Components/ErrorPage'
-import Library from './pages/Library'
-import Category from './Components/Category'
+import Home from './pages/Home';
+import ErrorPage from './Components/ErrorPage';
+import Library from './pages/Library';
+import Category from './Components/Category';
 import Profile from "./pages/Profile.jsx";
 import PersonalData from "./Components/PersonalData.jsx";
 import PersonalObjectives from "./Components/PersonalObjectives.jsx";
 import PersonalRead from "./Components/PersonalRead.jsx";
 import PersonalFavourites from "./Components/PersonalFavourites.jsx";
-import Login from './pages/Login'
-import Register from './pages/Register'
-import SendBooks from './Components/SendBooks'
-import BookDescription from './Components/BookDescription'
-import Admin from './pages/Admin'
+import Login from './pages/Login';
+import Register from './pages/Register';
+import SendBooks from './Components/SendBooks';
+import BookDescription from './Components/BookDescription';
+
+
 
 const router = createBrowserRouter([
   {
@@ -32,13 +33,11 @@ const router = createBrowserRouter([
     element: <Library/>,
     errorElement:<ErrorPage/>,
   },
-
   {
     path: "/library/:categoryName",
     element: <Category/>,
     errorElement:<ErrorPage/>,
   },
-
   {
     path: "/library/:categoryName/:bookDescription",
     element: <BookDescription/>,
@@ -82,11 +81,6 @@ const router = createBrowserRouter([
   {
     path: '/sendbooks',
     element: <SendBooks />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: '/admin',
-    element: <Admin />,
     errorElement: <ErrorPage />
   }
 
