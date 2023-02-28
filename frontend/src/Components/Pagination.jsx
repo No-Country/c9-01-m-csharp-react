@@ -1,71 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Book from './Book';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import autoayuda from '../DB/autoAyuda';
+import arteYdisenio from '../DB/arteYdisenio';
+
+
 const Pagination = () => {
+
   let { categoryName } = useParams();
-    const listaDeLibros = [
-      
-      {
-        name: "Meditations",
-        author:"Marco Aurelio",
-        price: "9.99",
-      },
+  
+  const [librosMostrar, setLibrosMostrar] = useState([])
+  
+  useEffect(()=>{
+    if(categoryName==="Autoayuda"){
 
-      {
-        name: "Meditations",
-        author:"Marco Aurelio",
-        price: "9.99",
-      },
+      setLibrosMostrar([...autoayuda]);
+    }
 
+    if(categoryName === "Arte y Diseño"){
 
-      {
-        name: "Meditations",
-        author:"Marco Aurelio",
-        price: "9.99",
-      },
+      setLibrosMostrar([...arteYdisenio]);
+    }
 
-      {
-        name: "Meditations",
-        author:"Marco Aurelio",
-        price: "9.99",
-      },
+  },[])
 
-      {
-        name: "Meditations",
-        author:"Marco Aurelio",
-        price: "9.99",
-      },
-
-      {
-        name: "Meditations",
-        author:"Marco Aurelio",
-        price: "9.99",
-      },
-
-      {
-        name: "Meditations",
-        author:"Marco Aurelio",
-        price: "9.99",
-      },
-      {
-        name: "Meditations",
-        author:"Marco Aurelio",
-        price: "9.99",
-      },
-
-    ];
+  console.log(librosMostrar)
 
   return (
     <>
       <div className='grid gap-1 grid-cols-2 md:grid-cols-4 mx-auto px-4 my-4'>
       {
-        listaDeLibros.map((libro, index)=>{
+        librosMostrar.map((libro, index)=>{
 
           return(
             <div className='mx-auto my-3' key={index}>
-              <Link to={`/library/${categoryName}/${libro.name}`}>
-                <Book title={libro.name} author={libro.author} price={libro.price} />
+              <Link to={`/library/${categoryName}/${libro.id}`}>
+                <Book photoUrl={libro.photoUrl} title={libro.name} author={libro.author} price={libro.price} />
               </Link>
               
             </div>

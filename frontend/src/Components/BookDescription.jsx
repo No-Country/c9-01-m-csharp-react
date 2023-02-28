@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom';
 import Header from './Header';
 import { AiOutlineRight, AiOutlineDown, AiOutlineLine} from "react-icons/ai";
@@ -6,10 +6,11 @@ import { SlStar } from "react-icons/sl";
 import { FcLike } from "react-icons/fc";
 import Footer from "./Footer";
 import { Collapse } from 'react-collapse';
+import autoayuda from "../DB/autoAyuda";
+import arteYdisenio from '../DB/arteYdisenio';
 
 
 const AccordionItem=({open, toggle, title, description})=>{
-
   return(
     <div className='pt-[15px]'>
         <div onClick={toggle} className='w-full bg-white  flex justify-between items-center cursor-pointer'>
@@ -42,6 +43,32 @@ const BookDescription = () => {
   const [open, setOpen] = useState(false);
   let { bookDescription, categoryName } = useParams();
 
+
+  const [libroDatos, setLibrosDatos] = useState({});
+
+  useEffect(()=>{
+    if(categoryName==="Autoayuda"){
+
+      const result = autoayuda.filter(libro => libro.id === bookDescription);
+      const ahoraSi = result["0"]
+
+      setLibrosDatos({...ahoraSi})
+    }
+
+    if(categoryName === "Arte y Diseño"){
+
+      const result = arteYdisenio.filter(libro => libro.id === bookDescription);
+      const ahoraSi = result["0"]
+
+    setLibrosDatos({...ahoraSi})
+    }
+
+
+    
+    
+  }, [])
+
+  
   const toggle =(index)=>{
     if(open===index){
       return setOpen(null)
@@ -55,6 +82,8 @@ const BookDescription = () => {
       description:"lorem ipsum"
     },
   ]
+
+  console.log(libroDatos)
 
   return (
 
@@ -70,15 +99,15 @@ const BookDescription = () => {
           </div>
 
           <div id='book' className='w-full my-5 '>
-            <img className='w-[190px] h-[260px] mx-auto' src="https://images.unsplash.com/photo-1465848059293-208e11dfea17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt='image'/>
+            <img className='w-[190px] h-[260px] mx-auto' src={libroDatos.photoUrl} alt='image'/>
           </div>
 
           <div className='flex items-center justify-between'>
-              <h2 id='nameBook' className='text-4xl'>Meditations</h2>
-              <p id='price' className='text-3xl'>$ 9.99</p>
+              <h2 id='nameBook' className='text-4xl'>{libroDatos.name}</h2>
+              <p id='price' className='text-3xl'> <span>$</span> {libroDatos.price}</p>
           </div>
 
-          <p id='author' className='my-2'>Marcus Aurelio</p>
+          <p id='author' className='my-2'>{libroDatos.author}</p>
           <div id='valoration' className='flex'>
             <SlStar className='mr-2'/>
             <SlStar className='mx-2'/>
