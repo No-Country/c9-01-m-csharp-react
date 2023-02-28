@@ -24,3 +24,9 @@
 
     background-color: var(--acento);
 }
+
+.bg-image{
+
+    background-image: var(--color-primary);
+}
+

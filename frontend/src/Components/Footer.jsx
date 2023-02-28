@@ -1,9 +1,11 @@
+
+
 const Footer = () => {
   return (
       <div className='bg-[#323232] px-5 lg:px-24 rounded-t-xl'>
           <div className='text-white py-16 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-0'>
               <div className='col-span-2 lg:col-span-1 mb-10'>
-                  <h2 className='text-2xl mb-2'>The Book Store</h2>
+                  <h2 className='text-2xl mb-2'>Bookly</h2>
                   <p className='text-lg font-light'>Una librería exclusivamente digital</p>
               </div>
               <div>

@@ -1,6 +1,9 @@
 import { useRef, useState, useEffect } from "react";
 import Book from "./Book.jsx";
 import { motion } from "framer-motion";
+import autoayuda from "../DB/autoAyuda.js";
+
+
 const BookCarousel = () => {
     const [width, setWidth] = useState(0);
     const carousel = useRef();
@@ -12,8 +15,8 @@ const BookCarousel = () => {
     return (
         <div className='overflow-hidden' ref={carousel}> {/* Outer carousel */}
             <motion.div drag='x' dragConstraints={{ right: 0, left: -width }} className='flex gap-x-5'> {/* Inner carousel */}
-                {booksList.map((book, id) => {
-                    return <Book title={book.title} author={book.author} price={book.price} key={id} />
+                {autoayuda.map((book, id) => {
+                    return <Book title={book.title} author={book.author} price={book.price} key={id} photoUrl={book.photoUrl} />
                 })}
             </motion.div>
         </div>
