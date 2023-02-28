@@ -3,6 +3,7 @@ import Book from './Book';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import autoayuda from '../DB/autoAyuda';
+import arteYdisenio from '../DB/arteYdisenio';
 
 
 const Pagination = () => {
@@ -10,13 +11,16 @@ const Pagination = () => {
   let { categoryName } = useParams();
   
   const [librosMostrar, setLibrosMostrar] = useState([])
-
-
-
+  
   useEffect(()=>{
     if(categoryName==="Autoayuda"){
 
       setLibrosMostrar([...autoayuda]);
+    }
+
+    if(categoryName === "Arte y Diseño"){
+
+      setLibrosMostrar([...arteYdisenio]);
     }
 
   },[])

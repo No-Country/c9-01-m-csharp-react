@@ -7,6 +7,7 @@ import { FcLike } from "react-icons/fc";
 import Footer from "./Footer";
 import { Collapse } from 'react-collapse';
 import autoayuda from "../DB/autoAyuda";
+import arteYdisenio from '../DB/arteYdisenio';
 
 
 const AccordionItem=({open, toggle, title, description})=>{
@@ -46,11 +47,24 @@ const BookDescription = () => {
   const [libroDatos, setLibrosDatos] = useState({});
 
   useEffect(()=>{
+    if(categoryName==="Autoayuda"){
 
-    const result = autoayuda.filter(libro => libro.id === bookDescription);
-    const ahoraSi = result["0"]
+      const result = autoayuda.filter(libro => libro.id === bookDescription);
+      const ahoraSi = result["0"]
+
+      setLibrosDatos({...ahoraSi})
+    }
+
+    if(categoryName === "Arte y Diseño"){
+
+      const result = arteYdisenio.filter(libro => libro.id === bookDescription);
+      const ahoraSi = result["0"]
 
     setLibrosDatos({...ahoraSi})
+    }
+
+
+    
     
   }, [])
 
