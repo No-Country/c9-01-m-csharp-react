@@ -5,7 +5,7 @@ const Profile = (props) => {
     return (
         <>
             <Header />
-            <UserInfo name={'Fede'} />
+            <UserInfo name={'Federico'} />
         </>
     )
 }
