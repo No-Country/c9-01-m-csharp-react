@@ -34,7 +34,11 @@ const Header = () => {
             <Link to={'/perfil'}>
               <FaUserAlt className='mx-2 text-base'/>
             </Link>
-            <FaShoppingCart className='mx-2 text-base'/>
+
+            <Link to={'/cart'} >
+              <FaShoppingCart className='mx-2 text-base'/>
+              </Link>
+            
           </div>
         </div>
 

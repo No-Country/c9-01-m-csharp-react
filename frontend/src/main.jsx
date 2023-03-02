@@ -20,6 +20,9 @@ import Register from './pages/Register';
 import SendBooks from './Components/SendBooks';
 import BookDescription from './Components/BookDescription';
 import Admin from './pages/Admin';
+import Cart from './pages/Cart';
+import Pay from './Components/Pay';
+import PayCard from './Components/PayCard.jsx';
 
 
 
@@ -82,6 +85,21 @@ const router = createBrowserRouter([
   {
     path: '/admin',
     element: <Admin />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/cart',
+    element: <Cart />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/pay',
+    element: <Pay />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/paycard',
+    element: <PayCard />,
     errorElement: <ErrorPage />
   }
 

@@ -16,6 +16,9 @@ const Pagination = () => {
     if(categoryName==="Autoayuda"){
 
       setLibrosMostrar([...autoayuda]);
+
+
+
     }
 
     if(categoryName === "Arte y Diseño"){
@@ -38,7 +41,6 @@ const Pagination = () => {
               <Link to={`/library/${categoryName}/${libro.id}`}>
                 <Book photoUrl={libro.photoUrl} title={libro.name} author={libro.author} price={libro.price} />
               </Link>
-              
             </div>
             
           )
