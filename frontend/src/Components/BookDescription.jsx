@@ -91,7 +91,7 @@ const BookDescription = () => {
   return (
     <>
       <Header />
-      <div className="p-7 md:mb-10">
+      {/* <div className="p-7 md:mb-10">
         <div id="bookDescription">
           <p className="flex items-center">
             <span>
@@ -137,6 +137,10 @@ const BookDescription = () => {
               <SlStar className="mx-2" />
               <SlStar className="mx-2" />
               <SlStar className="mx-2" />
+            <div className='md:col-span-6 col-span-12'>
+            <div className='flex items-center justify-between'>
+              <h2 id='nameBook' className='text-4xl'>{libroDatos.name}</h2>
+              <p id='price' className='text-3xl'> <span>$</span> {libroDatos.price}</p>
             </div>
 
             <div className="w-full mt-6 grid gap-3 grid-cols-12">
@@ -168,7 +172,7 @@ const BookDescription = () => {
             </section>
           </div>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
   );
