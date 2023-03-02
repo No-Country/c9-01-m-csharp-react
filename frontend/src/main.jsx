@@ -48,7 +48,7 @@ const router = createBrowserRouter([
     errorElement:<ErrorPage/>,
   },
   {
-    path: 'perfil',
+    path: '/perfil',
     element: <Profile />,
     errorElement: <ErrorPage />
   },
@@ -104,6 +104,7 @@ const router = createBrowserRouter([
   }
 
 ]);
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 

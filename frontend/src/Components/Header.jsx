@@ -6,8 +6,8 @@ import {  BsSearch } from "react-icons/bs";
 import {VscChromeClose} from "react-icons/vsc";
 import "./Header.css";
 import {Link, NavLink} from 'react-router-dom';
-
 import "../index.css";
+import Logo from "../assets/WhatsApp Image 2023-02-28 at 10.38.57 AM.jpeg"
 
 const Header = () => {
 
@@ -27,7 +27,9 @@ const Header = () => {
             <FaBars className='text-base cursor-pointer' onClick={()=>{setIsOpenMenu(!isOpenMenu)}}/>
 
           <Link to={'/'}>
-            <h1 className='text-base text-center w-full'>Libros</h1>
+            <h1 className='text-base text-center w-full'>
+              <img src={Logo} style={{width:"150px"}} className='bg-image' />
+            </h1>
           </Link>
 
           <div className='flex '>
