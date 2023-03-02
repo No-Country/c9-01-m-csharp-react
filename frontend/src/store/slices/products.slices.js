@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
+import arteYdisenio from "../../DB/arteYdisenio";
 
 const productSlice = createSlice({
   name: "products",
-  initialState: "variable global",
+  initialState: arteYdisenio,
   reducers: {
     setProductGlobal: (state, action) => action.payload,
   },
