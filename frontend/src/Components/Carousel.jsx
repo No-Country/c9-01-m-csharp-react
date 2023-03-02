@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs";
 import {RxDotFilled} from "react-icons/rx";
+import BookDescription from './BookDescription';
 
 
 const Carousel = () => {
@@ -46,22 +47,24 @@ const Carousel = () => {
   return (
    
     <div className='max-w-[1400px] h-[580px] w-full m-auto  relative group'>
-        <div style={{backgroundImage: `url(${slides[currentIndex].url})`}}  className='w-full h-full bg-center bg-cover duration-500'>
+        
+        <div className='hidden md:block'>
+            hola
         </div>
-
-        {/* left arrow*/}
+        
+        <div style={{backgroundImage: `url(${slides[currentIndex].url})`}}  className='w-full h-full bg-center bg-cover duration-500 md:hidden'>
+        </div>
+            {/* left arrow*/}
             <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                 <BsChevronCompactLeft onClick={()=>{prevSlide()}} size={40}/>
             </div>
             {/* left arrow*/}
-            <div className=' hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                 <BsChevronCompactRight onClick={()=>{nextSlide()}} size={40}/>
             </div>
-
-            <div className='flex top-4 justify-center py-2'>
+            <div className='md:hidden flex top-4 justify-center py-2'>
                 {
                     slides.map((slide, slideIndex)=>{
-
                         return(
                             <div key={slideIndex} className='cursor-pointer' onClick={()=>{goToSlide(slideIndex)}}>
                                 <RxDotFilled size={25}/>

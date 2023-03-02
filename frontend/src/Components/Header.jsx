@@ -20,11 +20,15 @@ const Header = () => {
     
   return (
     <div className='relative'>
-      <div id='Header' className='bg-color-color-principal w-screen p-5' style={{height:"120px"}}>
+      <div id='Header' className='bg-color-color-principal w-screen p-5' >
 
         <div id='buttons-header ' className='flex justify-between items-center'>
           
             <FaBars className='text-base cursor-pointer' onClick={()=>{setIsOpenMenu(!isOpenMenu)}}/>
+            <div className='relative hidden md:block'>
+              <input type='text' className='w-full bg-zinc-200 p-2 rounded-md' id='search' placeholder='Buscar libros autores, ect.'/>
+              <BsSearch className='absolute top-3 right-4'/>
+            </div>
 
           <Link to={'/'}>
             <h1 className='text-base text-center w-full'>
@@ -39,12 +43,12 @@ const Header = () => {
 
             <Link to={'/cart'} >
               <FaShoppingCart className='mx-2 text-base'/>
-              </Link>
+            </Link>
             
           </div>
         </div>
 
-        <div className='relative mt-5'>
+        <div className='relative mt-5 md:hidden'>
           <input type='text' className='w-full bg-zinc-200 p-2 rounded-md' id='search' placeholder='Buscar libros autores, ect.'/>
           <BsSearch className='absolute top-3 right-4'/>
         </div>

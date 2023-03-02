@@ -14,18 +14,11 @@ const Pagination = () => {
   
   useEffect(()=>{
     if(categoryName==="Autoayuda"){
-
       setLibrosMostrar([...autoayuda]);
-
-
-
     }
-
     if(categoryName === "Arte y Diseño"){
-
       setLibrosMostrar([...arteYdisenio]);
     }
-
   },[])
 
   console.log(librosMostrar)

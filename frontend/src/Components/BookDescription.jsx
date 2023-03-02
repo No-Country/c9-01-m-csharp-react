@@ -9,7 +9,6 @@ import { Collapse } from 'react-collapse';
 import autoayuda from "../DB/autoAyuda";
 import arteYdisenio from '../DB/arteYdisenio';
 
-
 const AccordionItem=({open, toggle, title, description})=>{
   return(
     <div className='pt-[15px]'>
@@ -89,7 +88,7 @@ const BookDescription = () => {
 
     <>
         <Header/>
-        <div className='p-5'>
+        <div className='p-7 md:mb-10'>
           <div id='bookDescription'>
               <p className='flex items-center'>
                   <span> <Link to={"/library"}>Biblioteca</Link></span>
@@ -98,43 +97,47 @@ const BookDescription = () => {
               </p>
           </div>
 
-          <div id='book' className='w-full my-5 '>
-            <img className='w-[190px] h-[260px] mx-auto' src={libroDatos.photoUrl} alt='image'/>
-          </div>
+          <div className='w-full grid grid-cols-12 '>
 
-          <div className='flex items-center justify-between'>
-              <h2 id='nameBook' className='text-4xl'>{libroDatos.name}</h2>
-              <p id='price' className='text-3xl'> <span>$</span> {libroDatos.price}</p>
-          </div>
+            <div id='book' className='w-full my-5 md:col-span-6 col-span-12'>
+              <img className='w-[190px] h-[260px] mx-auto' src={libroDatos.photoUrl} alt='image'/>
+            </div>
 
-          <p id='author' className='my-2'>{libroDatos.author}</p>
-          <div id='valoration' className='flex'>
-            <SlStar className='mr-2'/>
-            <SlStar className='mx-2'/>
-            <SlStar className='mx-2'/>
-            <SlStar className='mx-2'/>
-            <SlStar className='mx-2'/>
-          </div>
+            <div className='md:col-span-6 col-span-12'>
+            <div className='flex items-center justify-between'>
+                <h2 id='nameBook' className='text-4xl'>{libroDatos.name}</h2>
+                <p id='price' className='text-3xl'> <span>$</span> {libroDatos.price}</p>
+            </div>
 
-          <div className='w-full mt-6 grid gap-3 grid-cols-12'>
-            <button className='bg-stone-200 col-span-10 py-2'>Añadir al carrito</button>
-            <button className='bg-stone-200 col-span-2 py-2 flex items-center justify-center'><FcLike/></button>
-          </div>
+            <p id='author' className='my-2'>{libroDatos.author}</p>
+            <div id='valoration' className='flex'>
+              <SlStar className='mr-2'/>
+              <SlStar className='mx-2'/>
+              <SlStar className='mx-2'/>
+              <SlStar className='mx-2'/>
+              <SlStar className='mx-2'/>
+            </div>
+
+            <div className='w-full mt-6 grid gap-3 grid-cols-12'>
+              <button className='bg-stone-200 col-span-10 py-2'>Añadir al carrito</button>
+              <button className='bg-stone-200 col-span-2 py-2 flex items-center justify-center'><FcLike/></button>
+            </div>
           
-          <section className='grid'>
-            {
-              accordionData.map((data,index)=>{
-                return <AccordionItem 
-                        key={index} 
-                        open={index === open} 
-                        title={data.title} 
-                        description={data.description}
-                        toggle={()=>{toggle(index)}}
-                        />
-              })
-            }
-          </section>
-          
+            <section className='grid'>
+              {
+                accordionData.map((data,index)=>{
+                  return <AccordionItem 
+                          key={index} 
+                          open={index === open} 
+                          title={data.title} 
+                          description={data.description}
+                          toggle={()=>{toggle(index)}}
+                          />
+                })
+              }
+            </section>
+            </div>
+          </div>
         </div>
         <Footer/>
     </>
