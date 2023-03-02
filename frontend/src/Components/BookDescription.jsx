@@ -105,8 +105,8 @@ const BookDescription = () => {
 
             <div className='md:col-span-6 col-span-12'>
             <div className='flex items-center justify-between'>
-                <h2 id='nameBook' className='text-4xl'>{libroDatos.name}</h2>
-                <p id='price' className='text-3xl'> <span>$</span> {libroDatos.price}</p>
+              <h2 id='nameBook' className='text-4xl'>{libroDatos.name}</h2>
+              <p id='price' className='text-3xl'> <span>$</span> {libroDatos.price}</p>
             </div>
 
             <p id='author' className='my-2'>{libroDatos.author}</p>

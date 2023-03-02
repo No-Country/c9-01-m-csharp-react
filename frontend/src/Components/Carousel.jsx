@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs";
 import {RxDotFilled} from "react-icons/rx";
 import BookDescription from './BookDescription';
+import { FcLike } from 'react-icons/fc';
 
 
 const Carousel = () => {
@@ -44,12 +45,24 @@ const Carousel = () => {
         setCurrentIndex(slideIndex);
     }
 
-  return (
-   
-    <div className='max-w-[1400px] h-[580px] w-full m-auto  relative group'>
+    return (
+    <div className='max-w-[1400px] h-[580px] w-full m-auto  relative group' style={{backgroundColor:"#E2F0F3"}} >
         
-        <div className='hidden md:block'>
-            hola
+        <div className='hidden md:block h-full'>
+            <div className='w-[600px] flex justify-center items-center mx-auto my-auto' style={{paddingTop:"8rem"}}>
+                <img className='w-[190px] h-[260px]' src={"https://m.media-amazon.com/images/I/410aq1ug9oL.jpg"} alt='image'/>
+                <div className='px-4'>
+                    <h1 className='text-4xl'>No me puedes lastimar </h1>
+                    <p className='mt-4'>David Goggins</p>
+                    <p className='mt-10'>
+                    "Un relato conmovedor y valiente sobre la superación de la adversidad y la búsqueda de la felicidad."
+                    </p>
+                    <div className='w-full mt-6 grid gap-3 grid-cols-12'>
+                        <button className='bg-stone-200 col-span-10 py-2'style={{backgroundColor:"#FDB849"}}>Añadir al carrito</button>
+                        <button className='bg-stone-200 col-span-2 py-2 flex items-center justify-center' style={{backgroundColor:"#FDB849"}}><FcLike/></button>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div style={{backgroundImage: `url(${slides[currentIndex].url})`}}  className='w-full h-full bg-center bg-cover duration-500 md:hidden'>
@@ -75,7 +88,7 @@ const Carousel = () => {
             </div>
     </div>
 
-  )
+    )
 }
 
 export default Carousel
