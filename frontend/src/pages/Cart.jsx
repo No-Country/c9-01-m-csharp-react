@@ -3,8 +3,10 @@ import { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Header from "../Components/Header";
 import autoayuda from "../DB/autoAyuda";
-import { BsTrash } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import { BsTrash } from "react-icons/bs";
+import { AiOutlineMinusCircle } from "react-icons/ai";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const Cart = () => {
   const id = useSelector((state) => state.products);
@@ -38,7 +40,7 @@ const Cart = () => {
     const porcentajecode = (subtotal(array) * parseFloat(codeP)) / 100;
     const final = parseFloat(subtotal(array)) - parseFloat(porcentajecode);
     console.log(porcentajecode);
-    return final;
+    return final.toFixed(2);
   };
 
   return (
@@ -60,7 +62,11 @@ const Cart = () => {
                     <h3 className="font-semibold text-base">{prod.name}</h3>
                     <h4 className="font-light text-xs">{prod.author}</h4>
                   </div>
-                  <div>- {prod.quantity} +</div>
+                  <div className="flex gap-1 items-center">
+                    <AiOutlineMinusCircle className="text-lg" />
+                    <h3 className="text-lg">{prod.quantity} </h3>
+                    <AiOutlinePlusCircle />
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col justify-between">
