@@ -81,19 +81,19 @@ const Header = () => {
               isActive ? activeStyle : undefined
             }>Best-sellers</NavLink>
         </div>
-       
+      
         <div className='w-full pt-6'>
           <NavLink to={"/library/Descuentos"}             
           style={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>Descuentos</NavLink>
         </div>
-
+        
         <div className='w-full pt-6'>
-          <NavLink to={"/perfil"}
+          <NavLink to={"/register"}
           style={({ isActive }) =>
               isActive ? activeStyle : undefined
-          }>Perfil</NavLink>
+          }>Sign up</NavLink>
         </div>
 
       </div>
