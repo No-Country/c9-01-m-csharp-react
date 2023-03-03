@@ -3,8 +3,10 @@ import { FaUserAlt } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { AiOutlineCreditCard } from "react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
 import { BsArrowUpRightSquare } from "react-icons/bs";
 import { GrNext } from "react-icons/gr";
+import { NavLink } from "react-router-dom";
 
 const PayCard = () => {
   const [chance, setChance] = useState(false);
@@ -31,6 +33,14 @@ const PayCard = () => {
 
   const chanceState = () => {
     setChance(true);
+  };
+
+  const showPopUP = () => {
+    modal.showModal();
+  };
+
+  const closeModal = () => {
+    modal.close();
   };
 
   return (
@@ -128,9 +138,49 @@ const PayCard = () => {
           </div>
         )}
 
-        <button className="bg-[#FDB849] text-black w-80 h-12 py-2 rounded-3xl font-semibold text-lg">
+        <button
+          className="bg-[#FDB849] text-black w-80 h-12 py-2 rounded-3xl font-semibold text-lg"
+          onClick={showPopUP}
+        >
           Comprar
         </button>
+        {/*   */}
+
+        <dialog id="modal">
+          <div className="flex flex-col gap-1">
+            <AiFillCheckCircle className=" text-[#FDB849] text-3xl text-center self-center m-1" />
+            <h2 className="self-center text-base font-medium mb-1 pb-1">
+              Compra realizada
+            </h2>
+            <h3 className="text-sm font-light font-medium">
+              Su compra fue procesada con éxito.
+            </h3>
+            <p className="text-sm font-light">
+              Revise su correo electronico ya fue enviado su
+              <br /> libro, muchas gracias por su compra
+            </p>
+            <NavLink
+              to={"/library"}
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              <button
+                id="closeModal"
+                onClick={closeModal}
+                className="text-right m-4"
+              >
+                Ir a la biblioteca
+              </button>
+            </NavLink>
+          </div>
+        </dialog>
+
+        {/* <button
+              id="closeModal"
+              onClick={closeModal}
+              className="text-right m-4"
+            >
+              Ir a la biblioteca
+            </button> */}
       </div>
     </div>
   );
